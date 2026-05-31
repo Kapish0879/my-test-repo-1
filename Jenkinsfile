@@ -29,7 +29,7 @@ pipeline
 
             steps {
                 sh '''
-                tar -czf frontend.tar.gz .
+                npm run build
                 '''
             }
         }
