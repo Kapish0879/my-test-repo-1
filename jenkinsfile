@@ -7,7 +7,7 @@ pipeline
 
     tools {
        // npm 'npm-app-18'
-        npm 'npm-web-16'
+       nodejs 'npm-web-16'
         //dockerTool 'my-docker'
     }
   
