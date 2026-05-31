@@ -7,7 +7,7 @@ pipeline
 
     tools {
        // npm 'npm-app-18'
-       nodejs 'npm-web-16'
+        npm 'npm-web-16'
         //dockerTool 'my-docker'
     }
   
@@ -24,12 +24,13 @@ pipeline
             }
         }
 
-        stage('Package') {
+        
+        stage('Create Artifact') {
+
             steps {
-
-                sh 'npm run build'
-
-                echo "NPM Package Goal Executed Successfully!"
+                sh '''
+                tar -czf frontend.tar.gz .
+                '''
             }
         }
 
