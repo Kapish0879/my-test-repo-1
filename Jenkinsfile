@@ -7,7 +7,7 @@ pipeline
 
     // tools {
     //    // npm 'npm-app-18'
-    //    nodejs 'npm-web-16'
+    nodejs 'npm-web-16'
     //     //dockerTool 'my-docker'
     // }
   
@@ -29,7 +29,7 @@ pipeline
 
             steps {
                 sh '''
-                npm install
+                npm ci
                 npm run build
                 '''
             }
