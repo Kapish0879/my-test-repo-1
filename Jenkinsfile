@@ -5,11 +5,11 @@ pipeline
         label 'kapish'
     }
 
-    tools {
-       // npm 'npm-app-18'
-       nodejs 'npm-web-16'
-        //dockerTool 'my-docker'
-    }
+    // tools {
+    //    // npm 'npm-app-18'
+    //    nodejs 'npm-web-16'
+    //     //dockerTool 'my-docker'
+    // }
   
     stages {
 
