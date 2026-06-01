@@ -30,7 +30,9 @@ pipeline
             steps {
                 sh '''
                 npm ci
-                npm run build
+                npm audit fix
+                npm run 
+                npm build
                 '''
             }
         }
