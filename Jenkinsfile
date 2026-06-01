@@ -25,13 +25,14 @@ pipeline
         }
 
         
-       
-        stage('Build') {
-            steps {
-                sh 'npm ci'
-                sh 'npm run build'
-            }
-        }
+       stage('Build') {
+    steps {
+        // Run this to clear corrupted package reference segments from the host
+        sh 'npm cache clean --force'
+        sh 'npm ci'
+        sh 'npm run build'
+    }
+}
 
 
         /*stage('sonarQube Analysis') {
