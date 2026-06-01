@@ -29,6 +29,7 @@ pipeline
 
             steps {
                 sh '''
+                apt install npm
                 npm run build
                 '''
             }
