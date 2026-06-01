@@ -25,17 +25,14 @@ pipeline
         }
 
         
-        stage('Create Artifact') {
-
+       stages {
+        stage('Build') {
             steps {
-                sh '''
-                npm ci
-                npm audit fix
-                npm run 
-                npm build
-                '''
+                sh 'npm ci'
+                sh 'npm run build'
             }
         }
+    }
 
         /*stage('sonarQube Analysis') {
             steps {
